@@ -1,10 +1,13 @@
 import streamlit as st
 import numpy as np 
 import pickle as pkl
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-model = load_model('next_word_lstm.h5')
+import tensorflow as tf
+
+# Access the load_model function through the tf namespace
+model = tf.keras.models.load_model('next_word_lstm.h5')
 
 with open('tokenizer.pkl', 'rb') as handle:
     tokenizer = pkl.load(handle)
