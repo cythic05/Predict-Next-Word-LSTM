@@ -1,10 +1,8 @@
 import streamlit as st
-import numpy as np 
-import pickle as pkl
-# from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-
+import numpy as np
 import tensorflow as tf
+import pickle as pkl
+from keras.utils import pad_sequences
 
 # Access the load_model function through the tf namespace
 model = tf.keras.models.load_model('next_word_lstm.h5')
